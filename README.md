@@ -6,13 +6,13 @@
 
     pip install -r Visualisation-project/requirements.txt
 
- ## Запуск (производится из папки "Visualisation-project"):
+## Запуск (производится из папки "Visualisation-project"):
 
     python code\main.py
 
 ## Подготовка
-
-
+  Перенесите файлы формата: *AS_unpersonized_<date>.csv* в папку *Visualisation_project/data*
+  
 
 ## Как работать?
 
