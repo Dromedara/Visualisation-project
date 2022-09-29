@@ -1,7 +1,8 @@
-from database_block import BD
 import pandas
 from datetime import datetime
 import re
+
+from class_blocks.database_block import BD
 
 
 def get_num_of_rows():

@@ -1,4 +1,4 @@
-from database_block import BD
+from class_blocks.database_block import BD
 
 
 def greeting():

@@ -49,7 +49,7 @@ def show_dict(df, title_yes="", title_no="", flag=False):
 
     if flag:
         f.write(f"{title_yes}\n")
-        f.write(f"{str(len(df.index))} \n\n")
+        f.write(f"ВСЕГО: {str(len(df.index))} \n\n")
         f.write(df.to_string(index=False))
     else:
         f.write(f"{title_no}")

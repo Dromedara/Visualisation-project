@@ -1,5 +1,5 @@
-import start_block
-from operator_block import connection_operator
+import cover_blocks.start_block as start_block
+from class_blocks.operator_block import connection_operator
 
 
 def main():

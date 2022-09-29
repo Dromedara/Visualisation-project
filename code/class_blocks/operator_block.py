@@ -1,5 +1,5 @@
-import counter_block
-import end_block
+import funcs_blocks.counter_block as counter_block
+import cover_blocks.end_block as end_block
 
 
 class Operator():

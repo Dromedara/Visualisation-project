@@ -1,9 +1,9 @@
 import pandas as pd
-from database_block import BD
 from datetime import datetime
 
-import visualisation_block
-import subfuncs_block
+from class_blocks.database_block import BD
+import funcs_blocks.visualisation_block as visualisation_block
+import funcs_blocks.subfuncs_block as subfuncs_block
 
 ########################
 # 1
