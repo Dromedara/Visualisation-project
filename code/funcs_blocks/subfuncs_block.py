@@ -117,7 +117,7 @@ def regulise(ex):
     ex = ex.lower()
 
     res = re.findall(
-        r'[0-9]+[.][0-9]', ex)
+        r'[0-9]+.[0-9]', ex)
     if len(res) > 0:
         return res[0]
 
