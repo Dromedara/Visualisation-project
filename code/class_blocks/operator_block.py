@@ -15,7 +15,7 @@ class Operator():
         self.operation_names_list[6] = "Рейтинг пользователей по прогрессу за определенный промежуток времени"
         self.operation_names_list[7] = "Поиск подозрительного прогресса"
         self.operation_names_list[8] = "Поиск выполнивших минимум"
-        self.operation_names_list[9] = "Поиск имеющих менее <= 10% прогресса"
+        self.operation_names_list[9] = "Поиск имеющих <= 10% прогресса"
 
         self.operation_list_dict = {
             "Общий прогресс пользователей за выбранный промежуток времени": counter_block.all_progress,
@@ -28,7 +28,7 @@ class Operator():
             "Закончить работу": end_block.run_it,
             "Поиск подозрительного прогресса": counter_block.cheater_block,
             "Поиск выполнивших минимум": counter_block.have_mark,
-            "Поиск имеющих менее <= 10% прогресса": counter_block.have_no_mark
+            "Поиск имеющих <= 10% прогресса": counter_block.have_no_mark
         }
 
         self.subfuncks_dict = {
