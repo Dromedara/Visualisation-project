@@ -2,6 +2,7 @@ import os
 import re
 import pandas as pd
 from datetime import datetime
+from pathlib import Path
 
 
 class DataBase():
@@ -9,7 +10,7 @@ class DataBase():
     def __init__(self):
         self.bases_dict = {}
         self.dates_list = []
-        self.path = "C:\Ira\AtomPyProjects\Visualisation-project\data"
+        self.path = os.getcwd() + "\data"
         self.link_list = os.listdir(self.path)
         self.def_date = datetime.now()
         self.start_date = self.def_date
