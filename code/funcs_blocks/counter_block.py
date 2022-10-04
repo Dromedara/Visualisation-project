@@ -12,7 +12,7 @@ import funcs_blocks.subfuncs_block as subfuncs_block
 def count_arithmetic_mean(date=""):
     sum = BD.bases_dict[date]['Grade percent'].sum()
     count = len(BD.bases_dict[date].index)
-    return (sum / count) * 100
+    return (sum / count)
 
 
 def all_progress():
@@ -43,7 +43,7 @@ def individual_progress():
     values = []
     period = []
     for i in range(len(BD.str_period)):
-        if subfuncs_block.check_psblt_to_use(index=index, date=BD.str_period[i]):
+        if subfuncs_block.check_poss_index(index=index, date=BD.str_period[i]):
             values.append(get_value_by_choice(index, BD.str_period[i]))
             period.append(BD.date_period[i])
 
@@ -82,7 +82,7 @@ def all_progress_ex():
 
     values = []
     for date in str_period:
-        values.append(get_value_by_ex(ex=ex, date=date) * 100)
+        values.append(get_value_by_ex(ex=ex, date=date))
 
     visualisation_block.built_plot(y_values=values, x_values=period,
                                    title=f"Общий прогресс пользователей по {ex} за {BD.start_date} - {BD.finish_date}", xlbl="Дата", ylbl="Прогресс (%)")
@@ -119,7 +119,7 @@ def individual_progress_ex():
     for i in range(len(str_period)):
         date = str_period[i]
         if subfuncs_block.check_poss_index(index=index, date=date):
-            values.append(get_value_by_coordinates(index=index, ex=ex, date=date) * 100)
+            values.append(get_value_by_coordinates(index=index, ex=ex, date=date))
             period.append(BD.date_period[i])
     print(values)
     print(period)
@@ -303,7 +303,7 @@ def cheater_block():
     prl_df = prl_df.sort_values(by='Progress', ascending=False)
 
     txt1 = f"ПОДОЗРИЕТЛЬНЫЙ РОСТ ПРОГРЕССА\n\n"
-    txt2 = "Подозрительных случаев не обнаружено!"
+    txt2 = "Подозрительных случаев не обнаружено!\n (Подозрительным считается прирост более 50% прогресса за сутки)\n\n"
     flag = True if len(prl_df.index) > 0 else False
     visualisation_block.show_dict(df=prl_df, title_yes=txt1, title_no=txt2, flag=flag)
 
